@@ -1,0 +1,9 @@
+.navbar {
+    height: 5rem;
+    background-color: darkslategray;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}

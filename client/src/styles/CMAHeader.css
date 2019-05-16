@@ -1,0 +1,7 @@
+.cmaHeader {
+    height: 40em;
+    background-image: url(../images/CMAHeader.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100% 100%;
+}

@@ -1,0 +1,13 @@
+.searchHeader {
+    height: 40em;
+    background-image: url(../images/searchHeader.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100% 100%;
+}
+
+.familyHome {
+    width: 30em;
+    margin: auto;
+    width: 50%;
+}

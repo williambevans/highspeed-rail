@@ -1,0 +1,15 @@
+.header {
+    height: 43em;
+    background-image: url(../images/TexasCentralRail.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100% 100%;
+}
+
+.siteTitle {
+    font-size: 52px;
+    font-family: serif;
+    text-align: center;
+    color: white;
+    padding-top: 12.5rem;
+}
