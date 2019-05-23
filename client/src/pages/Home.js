@@ -1,15 +1,21 @@
 import React from "react";
-import Header from '../components/Header';
 import TexasCentral from '../components/TexasCentral';
 import Numbers from '../components/Numbers';
 import Players from '../components/Players';
 import Projects from '../components/Projects'
 import Problems from "../components/Problems";
+import Navbar from '../components/Navbar';
+import Index from '../pages/Index';
 
-function Home() {
+const Home = props => {
+    const { user, signOut } = props;
+    if (!user) {
+    return <Index />;
+}
     return (
         <div>
-        <Header />
+        <Navbar />
+        <button onClick={signOut}>Sign Out</button>
         <Players />
         <TexasCentral />
         <Numbers />
@@ -17,6 +23,6 @@ function Home() {
         <Problems />
         </div>
     );
-}
+};
 
 export default Home; 

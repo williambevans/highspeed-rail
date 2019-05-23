@@ -1,0 +1,20 @@
+.chatHeader {
+    height: 40em;
+    background-image: url(../images/Screen\ Shot\ 2019-05-15\ at\ 9.46.19\ PM.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100% 100%;
+    margin-bottom: 3em;
+    margin-left: 0;
+}
+
+.chatTitle {
+    padding-top: 4em;
+    color: darkslategray;
+    font-weight: bolder;
+    opacity: 0.7;
+    font-size: 69px;
+    font-family: serif;
+    text-align: center;
+    text-shadow: 4px 4px black;
+}

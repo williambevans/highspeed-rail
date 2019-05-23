@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
+  // Gets all messages
   getMessages: function() {
     return axios.get("/api/messages");
   },
@@ -9,7 +9,7 @@ export default {
   deleteMessages: function(id) {
     return axios.delete("/api/messages/" + id);
   },
-  // Saves a book to the database
+  // Saves a message to the database
   saveMessage: function(messageData) {
     return axios.post("/api/messages", messageData);
   }

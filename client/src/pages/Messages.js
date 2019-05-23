@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import Navbar from '../components/Navbar';
+import ChatHeader from "../components/ChatHeader";
 
 class Messages extends Component {
   state = {
@@ -50,12 +51,12 @@ class Messages extends Component {
 
   render() {
     return (
+      <div>
+      <Navbar />
+      <ChatHeader />
       <Container fluid>
         <Row>
           <Col size="md-6">
-            <Jumbotron>
-              <h1>Leave a detailed message if you or someone you know is being affected by the rail</h1>
-            </Jumbotron>
             <form>
               <Input
                 value={this.state.address}
@@ -83,9 +84,6 @@ class Messages extends Component {
             </form>
           </Col>
           <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>High-Speed Chat</h1>
-            </Jumbotron>
             {this.state.messages.length ? (
               <List>
                 {this.state.messages.map(message => (
@@ -108,6 +106,7 @@ class Messages extends Component {
           </Col>
         </Row>
       </Container>
+      </div>
     );
   }
 }

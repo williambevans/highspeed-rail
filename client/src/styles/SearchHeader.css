@@ -11,3 +11,32 @@
     margin: auto;
     width: 50%;
 }
+
+.container {
+    padding: 0 auto;
+}
+
+.col-map {
+    margin-top: 5em;
+}
+
+.col-searchForm {
+    margin-top:5em;
+}
+
+.map {
+    margin-top: 5em;
+}
+
+.btn-success {
+    width: 100%;
+}
+
+.searchAbout {
+    margin-top: 2.5em;
+    margin-bottom: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.875rem;
+}

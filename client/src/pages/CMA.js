@@ -1,10 +1,14 @@
 import React from "react";
 import CMAS from '../components/CMA';
+import CMAForm from '../components/CMAForm';
+import Navbar from '../components/Navbar';
 
 
 function CMAView() {
     return (
+      <div>
         <div>
+        <Navbar />
         <CMAS />
         <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -13,6 +17,8 @@ function CMAView() {
   </div>
 </div>
         </div>
+        <CMAForm />
+    </div>
     );
 }
 
