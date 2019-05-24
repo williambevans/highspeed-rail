@@ -1,6 +1,5 @@
 .chatHeader {
-    height: 40em;
-    background-image: url(../images/Screen\ Shot\ 2019-05-15\ at\ 9.46.19\ PM.png);
+    height: 6em;
     background-repeat: no-repeat;
     width: 100%;
     background-size: 100% 100%;
@@ -9,12 +8,44 @@
 }
 
 .chatTitle {
-    padding-top: 4em;
-    color: darkslategray;
-    font-weight: bolder;
-    opacity: 0.7;
-    font-size: 69px;
+    font-size: 52px;
     font-family: serif;
     text-align: center;
-    text-shadow: 4px 4px black;
+    color: white;
+    padding-top: 28rem;
+}
+
+textarea.form-control {
+    height: 10em;
+}
+
+.results {
+    border-radius: 20px;
+    border-color: darkslategray;
+    box-shadow: 8px 12px #888888;
+}
+
+.fa-comments {
+    font-size: 8em; color: darkgoldenrod;
+    text-shadow: 6px 3px black;
+    text-align:center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.connection {
+    text-align: center;
+    padding-top:5px;
+    margin-top: 5px;
+    font-size: 30px;
+    color: rgb(155, 155, 155);
+    font-size: 25px;
+}
+
+.btn-success {
+    background: darkslategray;
+}
+
+.btn-success:hover {
+    background: darkslategray;
 }

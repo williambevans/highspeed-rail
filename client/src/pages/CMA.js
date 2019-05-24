@@ -1,25 +1,113 @@
-import React from "react";
-import CMAS from '../components/CMA';
-import CMAForm from '../components/CMAForm';
+import React, { Component } from "react";
+import { Input, FormBtn } from "../components/Form";
+import { Col, Row, Container } from "../components/Grid";
 import Navbar from '../components/Navbar';
+var Zillow  = require('node-zillow')
+  
+
+class Search extends Component {
+  state = {
+    address: "",
+    zip: "",
+  };
 
 
-function CMAView() {
-    return (
-      <div>
+     // Handles updating component state when the user types into the input field
+    handleInputChange = event => {
+      const { name, value } = event.target;
+      this.setState({
+        [name]: value
+      });
+    };
+
+    handleFormSubmit = event => {
+      event.preventDefault();
+      if(this.state.address){
+        
+ 
+        var zwsid = "X1-ZWz17wwn5065fv_3jtqm";
+        var zillow = new Zillow(zwsid)
+        var parameters = {
+          zpid: 1111111
+        };
+        zillow.get('GetZestimate', parameters)
+          .then(function(results) {
+            console.log(results);
+            return results;
+            // results here is an object { message: {}, request: {}, response: {}} 
+          })
+        
+        this.setState({address: ""});
+    }
+  };
+
+    render() {
+      return (
         <div>
         <Navbar />
-        <CMAS />
-        <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Comparative Market Analysis</h1>
-    <p class="lead">A comparative market analysis is an examination of the prices at which similar properties in the same area recently sold. Property owners approached for land acquisition regarding the rail have accused Texas Central of heavy handed tactics negotiating purchase options. The proper CMA ensures you have done your homework to fully understand the value of your property; giving you the position to stand firm when an offer to acquire your land presents itself. Because Texas Central NEEDS your property for construction on the Texas High-Speed Rail, they could potentially try to undercut the value and worth of your home/property. Utilize our Comparative Market Analysis search tool to ensure you know just what your property is worth before accepting an offer.</p>
-  </div>
-</div>
+        <Container fluid>
+        <Row>  
+        <div className="searchHead">
+        <p className="searchAbout">Rail Demolition Stats</p>
+        <p className="goalState">Search your property to see if your home, family or business may be effected
+        </p>
         </div>
-        <CMAForm />
-    </div>
-    );
-}
+        </Row>
+          <Row>
+          <Col size="md-4 stats">
+            <div>
+            <i class="fas fa-globe-americas"></i>
+        <p className="goalState">Overall, between 7,957 and 8,218 acres of existing land would be converted for transportation use.
+        </p>
+      </div>
+      <div>
+      <i class="fas fa-house-damage"></i>
+        <p className="goalState">Between 272 and 298 residences and 49 to 68 commercial buildings will be acquired for the construction of the rail.
+        </p>
+      </div>
+      <div className="radius">
+      <div class="spinner-grow text-danger" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <p>property is 0-2 miles from rail</p>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <p>property is 2-4 miles from rail</p>
+      <div class="spinner-grow text-success" role="status">
+       <span class="sr-only">Loading...</span>
+      </div>
+      <p>property is 4-6 miles from rail</p>
+      </div>
+            </Col>
+            <Col size="md-6 searchForm">
+              <form>
+                <Input
+                  value={this.state.address}
+                  onChange={this.handleInputChange}
+                  name="address"
+                  placeholder="Address (required)"
+                />
+                <Input
+                  value={this.state.zip}
+                  onChange={this.handleInputChange}
+                  name="zip"
+                  placeholder="Zip (required)"
+                />
+                <FormBtn
+                  onClick={this.handleFormSubmit}
+                >
+                  Search
+                </FormBtn>
+              </form>
+            </Col>
+          </Row>
+        </Container>
+        </div>
+      );
+    }
+  }
 
-export default CMAView; 
+
+
+export default Search;

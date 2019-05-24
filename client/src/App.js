@@ -15,8 +15,8 @@ function App (){
     <Router>
         <Switch>
           <Route exact path="/" component={Index} />
-          <Route exact path="/home" component={Home} />
           <Route exact path="/search" component={Search} />
+          <Route exact path="/home" component={Home} />
           <Route exact path="/cma" component={CMAView} />
           <Route exact path="/message" component={Messages} />
         </Switch>

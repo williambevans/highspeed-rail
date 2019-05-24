@@ -5,7 +5,7 @@ import 'firebase/auth';
 import firebaseConfig from '../firebaseConfig';
 import "../styles/SignIn.css";
 import { Col, Row } from "../components/Grid";
-import Home from "../pages/Home";
+import Search from "../pages/Search";
 import Header from "../components/Header";
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
@@ -18,63 +18,45 @@ class Index extends Component {
           signInWithGoogle,
         } = this.props;
         if (user) {
-          return <Home user={user} signOut={signOut} />;
+          return <Search user={user} signOut={signOut} />;
         }
     return (
     <div>
     <Header />
-  <Row>
-    <Col size="md-6">
-    </Col>
-    </Row>
+   
     <div className="goal">
     <Row>
     <Col size="md-6 hands">
     <div>
-       
-     
     <i className="fas fa-american-sign-language-interpreting"></i>
-    
     <p className="mission">The Mission</p>
-        <p className="missionState">, business owners and elected officials from all across Texas who share our core belief of combating eminent domain for private use and our opposition to any tax-subsidized railway.</p>
+        <p className="missionState">Educate business owners and home owners on the High-Speed Rail project by providing a means to combat Texas Central from undercutting property values in land acquisitions</p>
       </div>
-   
     </Col>
     </Row>
     </div>
     <div className="mission">
     <Row>
-    <Col size="md-6">
-    <span>
-    <i class="fas fa-bullseye"></i>
-    </span>
-    </Col>
     <Col size="md-6 goals">
- 
     <div>
+    <i class="fas fa-bullseye"></i>
         <p className="goal">The Goal</p>
-        <p className="goalState">This site is intended to help individuals protect private property rights and prevent the wasteful use of taxpayer dollars or public subsidies for high-speed rail transportation. Our members include citizens, private property owners, business owners and elected officials from all across Texas who share our core belief of combating eminent domain for private use and our opposition to any tax-subsidized railway.</p>
+        <p className="goalState">This site is intended to help individuals ensure they have the tools necessary to equip themselves with the facts and numbers needed to stand against Texas Central.</p>
       </div>
     </Col>
     </Row>
   </div>
   <div className="activities">
     <Row>
-    <Col size="md-6 activities">
-    <span>
-    <i class="fas fa-fist-raised"></i>
-    </span>
-    </Col>
-    <Col size="md-6">
+    <Col size="md-6 mission">
       <div>
-        <p className="activites">Activites</p>
-        <p className="goalState">This site is intended to help individuals protect private property rights and prevent the wasteful use of taxpayer dollars or public subsidies for high-speed rail transportation. Our members include citizens, private property owners, business owners and elected officials from all across Texas who share our core belief of combating eminent domain for private use and our opposition to any tax-subsidized railway.</p>
+      <i class="fas fa-fist-raised"></i>
+        <p className="activites">Community</p>
+        <p className="goalState">Stay connected and informed with other locals involved in land disputes and property values on the High Speed Chat terminal</p>
       </div>
     </Col>
-    
     </Row>
   </div>
-
         <div className="App">
       <header className="sign-header">
         {
@@ -85,7 +67,7 @@ class Index extends Component {
         {
           user
             ? <button onClick={signOut}>Sign out</button>
-            : <button onClick={signInWithGoogle}>Sign in with Google</button>
+            : <button className="signIn" onClick={signInWithGoogle}>Sign in with Google</button>
         }
         </header>
   </div>

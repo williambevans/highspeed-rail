@@ -82,8 +82,12 @@ class Messages extends Component {
                 Submit Message
               </FormBtn>
             </form>
+            <i class="fas fa-comments"></i>
+            <p className="connection">Chat with locals affected by the Rail</p>
           </Col>
-          <Col size="md-6 sm-12">
+          
+          <Col size="md-6 sm-12 " >
+          <div className="results">
             {this.state.messages.length ? (
               <List>
                 {this.state.messages.map(message => (
@@ -103,6 +107,8 @@ class Messages extends Component {
             ) : (
               <h3>No Results to Display</h3>
             )}
+            </div>
+            
           </Col>
         </Row>
       </Container>

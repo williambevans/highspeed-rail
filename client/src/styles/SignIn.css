@@ -44,22 +44,23 @@
 }
 
 .mission {
-    margin-top: 6em;
+ 
     margin-bottom: 4px;
     text-align: center;
     text-transform: uppercase;
     text-align: center;
-    margin-left: 3em;
     font-size: 1.875rem;
+    margin-top: 1em;
 
 }
 
 .goal {
+   
     margin-bottom: 4px;
     text-align: center;
     text-transform: uppercase;
     text-align: center;
-    margin-right: 3em;
+    margin-top: 1em;
     
 }
 
@@ -82,23 +83,23 @@
 }
 
 .activities {
-    margin-top: 6em;
-    margin-bottom: 4px;
+ 
     text-align: center;
     text-transform: uppercase;
-    margin-left: 3em;
     font-size: 1.875rem;
-    margin-right: 3em;
+    margin-top: 1em;
 }
 
 .fa-american-sign-language-interpreting {
-    font-size: 14em; color: darkgoldenrod;
+    font-size: 15em; color: darkgoldenrod;
     text-shadow: 6px 3px black;
+
 }
 
 .col-hands {
-    padding-top: 12em;
-    padding-left: 4.5em;
+    margin: 0 auto;
+    margin-top: 1em;
+  
 }
 
 .fa-bullseye {
@@ -109,10 +110,46 @@
 .fa-fist-raised {
     font-size: 8em; color: darkgoldenrod;
     text-shadow: 6px 3px black;
+  margin-bottom: .1em;
 }
 
+.row {
+    margin-bottom: 3.5em;
+}
 
+.col-goals {
+    margin: 0 auto;
+}
 
+.col-mission {
+    margin: 0 auto;
+}
+
+.sign-header {
+    font-size: 30px;
+    margin-bottom: 2em;
+    padding-bottom: 4em;
+}
+
+.signIn {
+    border-radius: 10px;
+    border-color: darkslategray;
+    box-shadow: 8px 12px #888888;
+    margin: 0 auto;
+    background: darkslategray;
+    color: white;
+}
+
+.steps {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 4em;
+    font-size: 30px;
+    font-family: "Nexa-Book";
+    font-weight: normal;
+
+}
 
 
 

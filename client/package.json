@@ -8,6 +8,7 @@
     "firebase": "^6.0.2",
     "google-map-react": "^1.1.4",
     "google-maps-react": "^2.0.2",
+    "node-zillow": "^2.0.0",
     "react": "^16.6.3",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.6.3",

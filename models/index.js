@@ -1,4 +1,3 @@
 module.exports = {
-    Message: require("./message"),
-    Coords: require("./coords")
+    Message: require("./message")
 };
